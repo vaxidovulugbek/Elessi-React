@@ -1,0 +1,210 @@
+.hero__info {
+  width: 100%;
+  background-color: #73AD21;
+}
+.hero__categories{
+  width: 70%;
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 16px;
+}
+.hero__browse {
+  position: relative;
+  padding: 20px;
+  width: 270px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #539309;
+}
+.hero__navlinks {
+  padding: 20px 0;
+  cursor: pointer;
+}
+.hero__menu-icon {
+  position: relative;
+  top: 1px;
+  font-size: 20px;
+  margin-right: 6px;
+}
+.hero-navlink-text {
+  position: relative;
+  bottom: 1px;
+  margin-right: 4px;
+  padding: 0;
+}
+.hero__call {
+  font-size: 18px;
+  text-decoration: none;
+  color: #fff;
+}
+.hero__call:hover {
+  color: #fff;
+}
+.hero__call-icon {
+  font-size: 20px;
+  margin-right: 6px;
+}
+.hero__browse-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+  padding: 0 20px;
+  border: 2px solid #539309;
+  background-color: #fff;
+}
+.hero__browse-link {
+  padding: 6px 0;
+  font-size: 15px;
+  font-weight: 500 !important;
+  border-bottom: 0.5px solid #ccc;
+  color: #333;
+}
+.hero__browse-icon {
+  margin-right: 10px;
+}
+.hero__browse-text {
+  font-weight: 400 !important;
+  text-transform: capitalize;
+}
+.carusel-img {
+  width: 100%;
+  height: 520px !important;
+}
+.carousel-item {
+  position: relative;
+}
+.carousel {
+  position: relative;
+}
+.carousel-control-prev {
+  position: absolute;
+  left: 20px;
+  width: 5% !important;
+}
+.carousel-control-next {
+  position: absolute;
+  right: 20px;
+  width: 5% !important; 
+}
+.carusel-left {
+  color: #000;
+  font-size: 30px;
+}
+.carusel-right {
+  color: #000;
+  font-size: 30px;
+}
+.sliderimg {
+  width: 370px;
+  height: 370px;
+  object-fit: cover;
+  position: absolute;
+  top: 0%;
+  right: 10%;
+  animation-name: imgslider;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+  opacity: 0;
+}
+
+@keyframes imgslider {
+  0% {
+    top: 0%;
+    opacity: 0;
+  }
+  100% {
+    top: 20%;
+    opacity: 1;
+  }
+}
+
+.slider-onfo {
+  position: absolute;
+  left: 30%;
+  top: 15%;
+  width: 340px;
+}
+.slider-info-n {
+  font-size: 16px;
+  margin-bottom: 20px;
+  display: inline-block;
+  color: #0062bd;
+  position: relative;
+
+  animation-name: sliderspan;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+@keyframes sliderspan {
+  0% {
+    right: 60px;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+.slider-info-text {
+  font-size: 35px;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: #0a0000;
+  position: relative;
+
+  animation-name: slidertext;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+@keyframes slidertext {
+  0% {
+    left: 70px;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+.slider-procent {
+  color: #EF4B11;
+}
+.slider-info-btn {
+  background-color: #5FA30F;
+  color: #fff;
+  border-radius: 4px;
+  font-weight: 600;
+  padding: 8px 20px;
+  border: none;
+  position: relative;
+
+  animation-name: sliderbtn;
+  animation-iteration-count: 1;
+  animation-duration: 2s;
+  animation-fill-mode: both;
+}
+.slider-info-btn:hover {
+  background-color: #508a0e;
+}
+@keyframes sliderbtn {
+  0% {
+    top: 70px;
+    opacity: 0;
+  }
+  100% {
+    top: 0;
+    opacity: 1;
+  }
+}
+.slider-f-btn {
+  background-color: #508a0e !important;
+  width: 9px !important;
+  height: 9px !important;
+  border-radius: 50%;
+}
