@@ -14,7 +14,6 @@ function Products() {
   const [heart, setHeart] = useState(true);
 
   const onmuseHendler = (e) => {
-    // console.log(e.target);
     setOpen(true)
   }
   return (
@@ -27,7 +26,7 @@ function Products() {
         <div className='product__offer df ai between'>
           {
             Object.map((item,i) => {
-              return <NavLink className='product__offer-item' key={i} to={`/card/${item.id}`}>
+              return <NavLink className='product__offer-itemm' key={i} to={`/card/${item.id}`}>
                 <div >
               {/* <img className='product__offer-img' src={item.imgone} alt="" /> */}
               {/* <div onMouseOver={() => setOpen(true)} onMouseOut={() => setOpen(false)}>

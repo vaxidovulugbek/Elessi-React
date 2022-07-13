@@ -1,19 +1,26 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { NavLink, Route, Routes } from 'react-router-dom';
 import Object from '../Objects/Headphones'
 import './Headphones.css'
 
 import { appContext } from '../../App';
 import NewArrival from './NewArrival';
-// import NewArrival from './NewArrival';
+
 function Headphones() {
-  console.log(Object);
-  // let newarrv = (e) => {
-  //   Object.filter(element => {
-  //     return element.type === "popular"
-  //   });
-  // }
   let mycart = useContext(appContext)
+  let categories = [...new Set(Object.map(item => item.type))];
+  let [type, settype] = useState(categories)
+  let filtered = (type) => {
+    if (type === 'All') {
+      mycart.SetObj(Object)
+      return
+    }
+    let newitemdata = Object.filter(item => {
+      return item.type === type
+    })
+    mycart.SetObj(newitemdata)
+  }
+
   return (
     <div className='container'>
       <div className='headphones df ai between'>
@@ -23,10 +30,14 @@ function Headphones() {
            <NavLink to="/featured"><button className='headphones__btn'>Featured</button></NavLink>
            <NavLink to="/popular"><button className='headphones__btn'>Popular</button></NavLink>
            <NavLink to="/onsale"><button className='headphones__btn'>On Sale</button></NavLink> */}
-           <button className='headphones__btn' onClick={() =>  Object.filter(element => element.type === "newarrival")}>New Arrivals</button>
-           <button className='headphones__btn' onClick={() =>  Object.filter(element => element.type === "popular")}>Featured</button>
-           <button className='headphones__btn' >Popular</button>
-           <button className='headphones__btn' onClick={() =>  Object.filter(element => element.type === "arrivals")}>On Sale</button>
+
+           {/* <button className='headphones__btn' onClick={newarrival}>New Arrivals</button>
+           <button className='headphones__btn' onClick={() =>  mycart.SetObj(mycart.Obj.filter(element => element.type === "featured"))}>Featured</button>
+           <button className='headphones__btn' onClick={popular}>Popular</button>
+           <button className='headphones__btn' onClick={() =>  mycart.SetObj(mycart.Obj.filter(element => element.type === "arrivals"))}>On Sale</button> */}
+           {type.map((item,i) => {
+              return <button className='headphones__btn' onClick={()=> filtered(item)} key={item}>{item}</button>
+            })}
          </div>
       </div>
     </div>

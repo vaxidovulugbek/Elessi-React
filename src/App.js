@@ -1,30 +1,27 @@
 import { createContext, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
-import Cart from './companents/Cart/Cart';
-import Header from './companents/Header/Header';
-import Featured from './companents/Headphones/Featured';
-import Headphones from './companents/Headphones/Headphones';
-import NewArrival from './companents/Headphones/NewArrival';
-import OnSale from './companents/Headphones/OnSale';
-import Popular from './companents/Headphones/Popular';
-import Hero from './companents/Hero/Hero';
-import Products from './companents/Products/Products';
-import Speaker from './companents/Speaker/Speaker';
-import SpekerFeatured from './companents/Speaker/SpekerFeatured';
-import Winshlist from './companents/Wishlist/Winshlist';
-import Arrivals from './companents/Arrivals/Arrivals'
 import Footer from './companents/Footer/Footer';
 import StoreElement from './companents/StoreElement/StoreElement';
+import WievingMore from './companents/WievMore/WievMore';
 import Main from './companents/Main';
+import Object from './companents/Objects/Headphones';
 
 export let appContext = createContext(0)
 function App() {
   let [cart,setCart] = useState(false)
   let [wishlist,setWishlist] = useState(false)
+  let [WievMore,setWievMore] = useState(false)
+  let [searchRespon,setSearchRespon] = useState(false)
+  let [WievElement,setWievElement] = useState([])
+  let [showLegth,setShowLegth] = useState(true)
+  let [menuRespond,setMenuRespond] = useState(false)
+  let [cartTotal,setCartTotal] = useState(0)
+
 
   let [saveArr, setSaveArr] = useState([])
   let [cardArr, setCardArr] = useState([])
+  let [Obj,SetObj] = useState(Object)
   let savehendler = (e) => {
     if(saveArr.indexOf(e) !== -1) return
     setSaveArr([...saveArr,e])
@@ -45,26 +42,22 @@ let removeSaveCart = (e) => {
   }))
 }
 
+// if (cardArr.length <= 0) {
+  // console.log(cardArr.length);
+  // setShowLegth(!showLegth)
+// }
+// else if (cardArr.length > 0) {
+//   setShowLegth(true)
+// }
+
   return (
     <div className="App">
-      <appContext.Provider value={{cart,setCart,setWishlist,wishlist,savehendler,saveArr,cardArr,removeSaveItem,removeSaveCart,saveCart}}>
-        {/* <Header />
-        <Cart />
-        <Winshlist />
-        <Hero />
-        <Products />
-        <Headphones /> */}
-        {/* <Main /> */}
+      <appContext.Provider value={{cart,setCart,setWishlist,wishlist,savehendler,saveArr,cardArr,removeSaveItem,removeSaveCart,saveCart,Obj,SetObj,WievMore,setWievMore,WievElement,setWievElement,setCartTotal,cartTotal,setSearchRespon,searchRespon,setMenuRespond,menuRespond}}>
        <Routes>
          <Route path='/' element={ <Main />} />
         <Route  path='card/:id' element={ <StoreElement />} />
-        {/* <Route path='/' element={<NewArrival />}/>
-        <Route path='featured' element={<Featured />}/>
-        <Route path='popular' element={<Popular />}/>
-        <Route path='onsale' element={<OnSale />}/> */}
+        <Route path='wiev/:id' element={ <WievingMore /> } />
       </Routes>
-        {/* <Speaker />
-        <Arrivals /> */}
         <Footer />
       </appContext.Provider>
     </div>

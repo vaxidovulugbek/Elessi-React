@@ -12,8 +12,8 @@ function Winshlist() {
         <button className='wishlist-close' onClick={() => mycart.setWishlist(!mycart.wishlist)}><BsChevronRight /></button>
         <div className='wishlist-cart-container'>
           {
-            mycart.saveArr.map(el => {
-              return <div className='wishlist__cart df between'>
+            mycart.saveArr.map((el,index) => {
+              return <div className='wishlist__cart df between' key={index}>
                 <div className='df'>
                   <img className='wishlist__cart-img' src={el.imgone} alt="" />
                   <div className='wishlist__cart-info df'>

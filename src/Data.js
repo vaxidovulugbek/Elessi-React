@@ -21,7 +21,7 @@ import imgfour5 from '../src/assets/imgs/imgfour5.jpeg'
 
 const Object = [
   {
-    id:1,
+    id:100,
     name:"Macro 14x Essential Lenses",
     sold:6,
     avialable:88,
@@ -41,7 +41,7 @@ const Object = [
    ]
   },
   {
-    id:2,
+    id:200,
     name:"Belkin Fitnes Armband",
     sold:79,
     avialable:51,
@@ -61,7 +61,7 @@ const Object = [
    ]
   },
   {
-    id:3,
+    id:300,
     name:"Ryze Tello Edu",
     sold:6,
     avialable:88,
@@ -81,7 +81,7 @@ const Object = [
    ]
   },
   {
-    id:4,
+    id:400,
     name:"Gamevice Controller",
     sold:6,
     avialable:88,
@@ -101,7 +101,7 @@ const Object = [
    ]
   },
   {
-    id:5,
+    id:Date.now(),
     name:"Wireless Game Controller",
     sold:6,
     avialable:88,

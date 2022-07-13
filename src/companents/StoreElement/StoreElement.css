@@ -205,3 +205,27 @@
 ul{
   padding: 0;
 }
+
+@media only screen and (max-width:1240px){
+  .element__item {
+    justify-content: space-between;
+  }
+  .element__slider {
+    width: 30%;
+  }
+}
+@media only screen and (max-width:960px){
+  .element__item {
+    justify-content: unset; 
+    flex-direction: column;
+  }
+  .element__slider {
+    width: 30%;
+  }
+  .element__info {
+    width: 65%;
+  }
+}
+
+
+

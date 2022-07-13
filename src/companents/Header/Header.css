@@ -78,9 +78,12 @@
   margin: 10px 0;
   cursor: pointer;
   padding: 3px;
+  text-decoration: none;
+  color: #333;
 }
 .searching__content:hover {
   background-color: #F9F9F9;
+  color: #333;
 }
 .searching__img {
   width: 55px;
@@ -96,6 +99,9 @@
   font-size: 14px;
   font-weight: 600;
 }
+.searching__name:hover {
+  color: #73AD21;
+}
 .searching__prices {
   display: flex;
   align-items: center;
@@ -109,4 +115,75 @@
 .searching__price {
   font-size: 13px;
   font-weight: 500;
+}
+.header-respond {
+  display: none;
+  width: 50px;
+  justify-content: space-between;
+}
+.header-respond  button {
+  border: none;
+  background-color: transparent;
+  font-size: 18px;
+}
+.header-res-form {
+  display: none;
+  position: absolute;
+  top: -170px;
+  left: 0;
+  width: 100%;
+  padding: 20px;
+  justify-content: space-between;
+  transition: all 0.6s;
+  z-index: 1006;
+  opacity: 0;
+  background-color: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.header-res-form input {
+  border: none;
+  outline: none;
+  width: 92%;
+  padding: 8px;
+  border-radius: 3px;
+  background-color: #F5F5F5;
+}
+.header-res-form button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 11px;
+  border-radius: 50%;
+  border: none;
+  margin-left: 10px;
+  background-color: #F5F5F5;
+}
+.header-res-form-show {
+  top: -10px;
+  opacity: 1;
+}
+@media screen and (max-width:960px){
+  .header__btn {
+    width: 20%;
+    font-size: 14px;
+  }
+  .header__form {
+    width: 60%;
+  }
+}
+@media screen and (max-width:720px){
+  .header__form{
+    display: none;
+  }
+  .header-respond {
+    display: flex;
+    align-items: center;
+  }
+  .header-res-form {
+    display: flex;
+  }
+  .header__shoppings{
+    width: 20%;
+  }
+
 }

@@ -17,10 +17,12 @@
   padding: 0;
   justify-content: space-between;
 }
-.arrivals__item {
+
+.arrivals__link {
   width: 30%;
   margin-bottom: 25px;
   transition: all 0.3s;
+  text-decoration: none;
 }
 .arrivals__list-img {
   width: 100%;
@@ -51,8 +53,8 @@
   color: transparent;
   background-color: transparent;
 }
-
-.arrivals__item:hover .arrivals__list-cntn{
+/* arrivals__link */
+.arrivals__link:hover .arrivals__list-cntn{
   color: #000;
   background-color: #fff;
 }
@@ -74,7 +76,7 @@
   transition: all 0.3s;
   background-color: transparent;
 }
-.arrivals__item:hover .arrivals__show-bg{
+.arrivals__link:hover .arrivals__show-bg{
   background-color: rgba(0, 0, 0, 0.207);
 }
 .arrivals__info {
@@ -128,4 +130,28 @@
 .arrival-cart-text {
   font-size: 15px;
   color: #999;
+}
+
+@media only screen and (max-width:960px){
+  .arrivals__link {
+    width: 40%;
+    margin-bottom: 20px;
+  }
+  .arrival-cart {
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+  }
+  .arrival-cart-item {
+    width: 30%;
+    margin: 10px 0;
+  }
+}
+@media only screen and (max-width:540px){
+  .arrivals__link {
+    width: 100%;
+    margin-bottom: 18px;
+  }
+  .arrival-cart-item {
+    width: 100%;
+  }
 }

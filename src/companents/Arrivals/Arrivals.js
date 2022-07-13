@@ -9,9 +9,14 @@ import { GiReturnArrow } from 'react-icons/gi';
 import Object from '../Objects/Headphones'
 
 import './Arrivals.css'
+import { NavLink } from 'react-router-dom';
 function Arrivals() {
   let mycart = useContext(appContext)
   let result = Object.filter(element => element.type === "arrivals");
+  let wievHendler = (item) => {
+    mycart.setWievMore(!mycart.WievMore)
+    mycart.setWievElement([item])
+  }
   return (
     <div className='container'>
       <div className='arrivals df ai between'>
@@ -20,7 +25,23 @@ function Arrivals() {
       <ul className='arrivals__list'>
         {
           result.map((item,index) => {
-            return <li key={index} className='arrivals__item df'>
+            // return <NavLink className="arrivals__link" key={index} to={`/wiev/${item.id}`}>
+            // <li className='arrivals__item df' onClick={() => mycart.setWievMore(!mycart.WievMore)}>
+            //   <div className='arrivals-show-el'>
+            //     <img className='arrivals__list-img' src={item.imgone} alt="" />
+            //     <div className='arrivals__list-cntn'><BsArrowsFullscreen className='arrivals-show-icon'/></div>
+            //     <div className='arrivals__show-bg'></div>
+            //   </div>
+            //   <div className='arrivals__info'>
+            //     <h3 className='arrivals__list-title'>{item.name}</h3>
+            //     <div className='arrivals__list-prices'>
+            //       <span className='arrivals__list-discount'>${item.discountprice}</span>
+            //       <span className='arrivals__list-price'>${item.price}</span>
+            //     </div>
+            //   </div>
+            // </li>
+            // </NavLink>
+            return <li className='arrivals__link df' onClick={() => wievHendler(item)} key={index}>
               <div className='arrivals-show-el'>
                 <img className='arrivals__list-img' src={item.imgone} alt="" />
                 <div className='arrivals__list-cntn'><BsArrowsFullscreen className='arrivals-show-icon'/></div>

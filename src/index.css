@@ -21,8 +21,26 @@ code {
   box-sizing: border-box;
 }
 .container {
-  width: 85%;
+  width: 85% ;
   margin: 0 auto;
+}
+/* @media screen and (min-width:960px){
+  .container {
+    max-width: 96% !important;
+    width: 96% !important;
+  }
+} */
+@media screen and (max-width:1260px){
+  .container {
+    max-width: 96% !important;
+    width: 96% !important;
+  }
+}
+@media screen and (width:1260px){
+  .container {
+    max-width: 96% !important;
+    width: 96% !important;
+  }
 }
 .df {
   display: flex;

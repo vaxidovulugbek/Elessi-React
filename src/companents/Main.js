@@ -12,6 +12,7 @@ import Hero from './Hero/Hero'
 // import Headphones from './Objects/Headphones'
 import Products from './Products/Products'
 import Speaker from './Speaker/Speaker'
+import WievMore from './WievMore/WievMore'
 import Winshlist from './Wishlist/Winshlist'
 
 function Main() {
@@ -20,6 +21,7 @@ function Main() {
       <Header />
       <Cart />
       <Winshlist />
+      <WievMore />
       <Hero />
       <Products />
       <Headphones />

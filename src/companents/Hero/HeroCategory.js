@@ -1,21 +1,29 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { CgMenu } from 'react-icons/cg';
 import { VscChevronDown } from 'react-icons/vsc';
 import { MdHeadsetMic } from 'react-icons/md';
-import { AiOutlineTablet ,AiOutlineCamera} from 'react-icons/ai';
+import { AiOutlineTablet ,AiOutlineCamera,AiOutlineMenu,AiOutlineLeft} from 'react-icons/ai';
 import { RiComputerLine } from 'react-icons/ri';
 import { GiSmartphone } from 'react-icons/gi';
 import { GoWatch } from 'react-icons/go';
 import { BsLaptop,BsTools,BsKeyboard ,BsCameraVideo} from 'react-icons/bs';
+import { appContext } from '../../App';
 function HeroCategory() {
+  let mycart = useContext(appContext)
   return (
     <div className='hero__info'>
     <div className='container'>
         <div className='df ai between'>
-          <div className='hero__categories df ai between'>
+          <div className={`hero__categories df ai between ${mycart.menuRespond ? "hero-menu-show" : ""}`}>
+            <div className='hero-respond-menu'>
+              <AiOutlineMenu />
+              <p>NAVIGATION</p>
+            </div>
+            <button className='hero-close-menu' onClick={() => mycart.setMenuRespond(!mycart.menuRespond)}><AiOutlineLeft /></button>
             <div className='hero__browse df ai'>
               <CgMenu className='hero__menu-icon' />
               <p className='hero__menubrowse'>browse categories</p>
+              <VscChevronDown className='hero__respond-icon' />
               <div className='hero__browse-menu'>
                 <div className='hero__browse-link df ai'><RiComputerLine className='hero__browse-icon' /><p className='hero__browse-text'>Computers</p></div>
                 <div className='hero__browse-link df ai'><BsLaptop className='hero__browse-icon' /><p className='hero__browse-text'>Laptopd</p></div>

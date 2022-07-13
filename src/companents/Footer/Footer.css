@@ -94,3 +94,34 @@
   right: 0;
   margin-top: 20px;
 }
+
+@media only screen and (max-width:960px){
+  .footer__content {
+    display: flex;
+    justify-content: unset;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width:540px){
+  .footer__item {
+    margin: 10px 0;
+  }
+  .footer__text {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .footer__newsletter {
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
+  .footer__list {
+    margin-bottom: 26px;
+  }
+  .footer__list-icon {
+    font-size: 14px;
+  }
+  .footer {
+    padding-bottom: 50px;
+    padding-top: 30px;
+  }
+}

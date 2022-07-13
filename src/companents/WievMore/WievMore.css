@@ -1,0 +1,78 @@
+.WievMore {
+  position: fixed;
+  top: 0;
+  right: -580px;
+  width: 550px;
+  height: 100vh;
+  transition: 0.6s;
+  /* border: 1px solid #000; */
+  background-color: #fff;
+  z-index: 1000;
+}
+.WievMore-show {
+  right: 0;
+}
+.WievMore-close {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -25px;
+  top: 40px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  font-size: 20px;
+  z-index: 1000;
+  transition: all 0.4s;
+  border:0.5px solid #ccc;
+  background-color: #fff;
+  box-shadow: -2px 1px 17px -1px rgba(34, 60, 80, 0.2);
+}
+.WievMore-close:hover {
+  background-color: #73AD21;
+  color: #fff;
+}
+.wiev-container {
+  position: relative;
+  padding: 40px;
+  height: 100%;
+}
+.wiev__imgs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.wiev__img {
+  width: 48%;
+  height: 300px;
+  object-fit: cover;
+}
+.wiev__title {
+  font-size: 26px;
+  color: #333;
+}
+.wiev__discountprice {
+  margin: 0 14px 0 0;
+  font-size: 18px;
+  color: #aaa;
+  text-decoration: line-through;
+}
+.wiev__price {
+  color: #333;
+  font-size: 20px;
+}
+.wiev-addet {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+.wiev-addet button {
+  width: 48%;
+  font-size: 16px;
+  border: none;
+  padding: 6px;
+  color: #fff;
+  background-color: #73AD21;
+}
