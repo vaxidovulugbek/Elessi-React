@@ -109,6 +109,13 @@
   right: 0;
 }
 
-
+@media screen and (max-width:520px){
+  .wishlist {
+    width: 90%;
+  }
+  .wishlist-container {
+    padding: 24px !important;
+  }
+}
 
 

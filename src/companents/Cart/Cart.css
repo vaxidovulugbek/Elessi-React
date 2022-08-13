@@ -116,6 +116,10 @@
   color: #333;
 }
 
-
+@media screen and (max-width:520px) {
+  .cart {
+    width: 90% !important;
+  }
+}
 
 

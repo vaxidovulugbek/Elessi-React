@@ -18,6 +18,7 @@ function Header() {
   let searchingHendler = (event) => {
     setValue(event.target.value)
     setshowStore(false)
+    
     if(event.target.value === "") {
       setshowStore(true)
     }
@@ -50,10 +51,11 @@ function Header() {
               <span className='header__btn-text'>Search</span>
               <i className='bx bx-search'></i>
             </button>
+            
           </form> 
           <div className='header__shoppings df ai'>
-            <i className='bx bx-shopping-bag' onClick={() => mycart.setCart(!mycart.cart)}><p className='shop-num'><span>{mycart.cardArr.length}</span></p></i>
-            <i className='bx bx-heart' onClick={() => mycart.setWishlist(!mycart.wishlist)}><p className='shop-num'><span>{mycart.saveArr.length}</span></p></i>
+            <i className="bx bx-shopping-bag" onClick={() => mycart.setCart(!mycart.cart)}><p className={`${mycart.cardArr.length === 0 ? "d-none" : "shop-num"}`}><span>{mycart.cardArr.length}</span></p></i>
+            <i className='bx bx-heart' onClick={() => mycart.setWishlist(!mycart.wishlist)}><p className={`${mycart.saveArr.length === 0 ? "d-none" : "shop-num"}`}><span>{mycart.saveArr.length}</span></p></i>
           </div>
 
         </div>

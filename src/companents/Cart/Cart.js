@@ -7,7 +7,6 @@ function Cart() {
   let mycart = useContext(appContext)
   let total = 0
   if (mycart.cardArr.length === 0) {
-    console.log('okki');
     mycart.setCartTotal(0)
   }
   

@@ -18,6 +18,7 @@ function App() {
   let [menuRespond,setMenuRespond] = useState(false)
   let [cartTotal,setCartTotal] = useState(0)
 
+  let [length,setlength] = useState(false)
 
   let [saveArr, setSaveArr] = useState([])
   let [cardArr, setCardArr] = useState([])
@@ -42,10 +43,11 @@ let removeSaveCart = (e) => {
   }))
 }
 
-// if (cardArr.length <= 0) {
-  // console.log(cardArr.length);
+if (cardArr.length === 0) {
+  console.log(cardArr.length);
+  // setlength(true)
   // setShowLegth(!showLegth)
-// }
+}
 // else if (cardArr.length > 0) {
 //   setShowLegth(true)
 // }

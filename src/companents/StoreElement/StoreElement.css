@@ -174,15 +174,16 @@
   margin: 0;
 }
 .carusel__list {
-  width: 400px;
+  width: 370px;
   display: flex;
   align-items: center;
   list-style: none;
   transition: all 0.4s linear;
 }
 .carusel__img {
-  width: 400px;
-  height: 400px;
+  position: relative;
+  width: 370px;
+  height: 370px;
   object-fit: cover;
 }
 .carusel__small-list {
@@ -192,6 +193,7 @@
   list-style: none;
   /* margin-top: 30px; */
   transition: all 0.4s linear;
+  display: none;
 }
 .carusel__small-item{
   /* margin: 8px; */
@@ -226,6 +228,20 @@ ul{
     width: 65%;
   }
 }
-
+@media only screen and (max-width:520px){
+  .carusel__small-list {
+    width: 100%;
+  }
+  .element__info {
+    width: 100%;
+  }
+  .element__buy {
+    flex-direction: column;
+  }
+  .element__buy-link {
+    width: 100%;
+    margin-right: 0;
+  }
+}
 
 

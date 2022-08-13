@@ -24,15 +24,15 @@ function StoreElement() {
 
   let smallCarusel = (e) => {
     let elSliderInner = document.querySelector(".carusel__list");
-    elSliderInner.style.transform = `translateX(${-e * 400}px)`;
+    elSliderInner.style.transform = `translateX(${-e * 370}px)`;
   }
+
   return (
     <div className='element'>
       <Header />
       <HeroStore />
       <Winshlist />
       <Cart />
-      {/* <HeroCategory /> */}
       <div className='container'>
       {
          Object.map((item,i) => {
@@ -46,10 +46,10 @@ function StoreElement() {
                   </div>
                 <div className='carusel__list-content'>
                   <ul id='carusel__list' className='carusel__list'>
-                      <li className='carusel__item'><img className='carusel__img' src={item.imgone} alt="" /></li>
-                      <li className='carusel__item'><img className='carusel__img' src={item.imgtwo} alt="" /></li>
-                      <li className='carusel__item'><img className='carusel__img' src={item.imgthree} alt="" /></li>
-                      <li className='carusel__item'><img className='carusel__img' src={item.imgfour} alt="" /></li>
+                      <li className='carusel__item'><img className='carusel__img' src={item.imgone} alt="shop" /></li>
+                      <li className='carusel__item'><img className='carusel__img' src={item.imgtwo} alt="shop" /></li>
+                      <li className='carusel__item'><img className='carusel__img' src={item.imgthree} alt="shop" /></li>
+                      <li className='carusel__item'><img className='carusel__img' src={item.imgfour} alt="shop" /></li>
                   </ul>
               </div>
                 <ul id='carusel__small-list' className='carusel__small-list'>
