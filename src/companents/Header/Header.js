@@ -24,14 +24,6 @@ function Header() {
     }
   } 
 
-
-  // if (mycart.cardArr.length <= 0) {
-  //   setShowLegth(false)
-  // }
-  // else if (mycart.cardArr.length > 0) {
-  //   setShowLegth(true)
-  // }
-
   return (
     <div className='header'>
       <div className='container'>

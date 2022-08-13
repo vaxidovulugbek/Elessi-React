@@ -1,9 +1,7 @@
 import React, { useContext } from 'react'
 import { appContext } from '../../App'
 import { BsChevronRight } from 'react-icons/bs';
-import Object from '../Objects/Headphones'
 import './WievMore.css'
-import { useLocation } from 'react-router-dom';
 import { BsShare,BsTwitter,BsTelegram} from 'react-icons/bs';
 import { FaFacebookF ,FaRegEnvelope} from 'react-icons/fa';
 function WievingMore() {
@@ -50,7 +48,6 @@ function WievingMore() {
                         </div>
                       </div>
                   </div>
-                  
                 })
               }
           </div>

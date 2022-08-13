@@ -1,17 +1,12 @@
 import React, { useContext } from 'react'
 import { FiHeart ,FiEye} from 'react-icons/fi';
-import { FaHeart} from 'react-icons/fa';
 import { appContext } from '../../App';
-import Object from '../Objects/Headphones'
-import Main from '../Main';
 import { NavLink } from 'react-router-dom';
 
 function NewArrival() {
   let mycart = useContext(appContext)
-  // let result = Object.filter(element => element.type === "newarrival");
   return (
     <div className='container'>
-      {/* <Main /> */}
           <div className='headphones-content df ai between'>
           {
             mycart.Obj.map((item,i) => {
@@ -34,7 +29,6 @@ function NewArrival() {
                   </div>
                 </div>
               </NavLink> 
-                // <NewArrival item={item} i={i}/>
             })
           }
       </div>

@@ -12,14 +12,12 @@
   font-size: 17px;
   border: none;
   margin-left: 40px;
-  /* padding-bottom: 5px; */
   border-bottom: 2px solid transparent;
   color: #aaa;
   background-color: transparent;
 }
 
 .headphones-content {
-  /* flex-wrap: wrap; */
   overflow: hidden;
   height: 365px;
   position: relative;

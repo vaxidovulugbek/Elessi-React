@@ -1,12 +1,10 @@
 import React, { useContext } from 'react'
-import { NavLink, Route, Routes } from 'react-router-dom';
 import banner3 from '../../assets/imgs/banner3.jpg'
 import banner4 from '../../assets/imgs/banner4.jpg'
 import './Speaker.css'
-
 import { appContext } from '../../App';
 import SpekerFeatured from './SpekerFeatured';
-// import NewArrival from './NewArrival';
+
 function Speaker() {
   let mycart = useContext(appContext)
   return (
@@ -14,10 +12,6 @@ function Speaker() {
       <div className='headphones df ai between'>
          <h3 className='headphones__name'>Speaker</h3>
          <div className='df ai'>
-           {/* <NavLink to="/spekerfeatured"><button className='headphones__btn'>New Arrivals</button></NavLink>
-           <NavLink to="/spekerfeatured"><button className='headphones__btn'>Featured</button></NavLink>
-           <NavLink to="/spikerpopular"><button className='headphones__btn'>Popular</button></NavLink>
-           <NavLink to="/spekeronssale"><button className='headphones__btn'>On Sale</button></NavLink> */}
          </div>
       </div>
         <SpekerFeatured />

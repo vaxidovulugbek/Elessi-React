@@ -1,13 +1,6 @@
 import React from 'react'
 import './Hero.css'
-import { CgMenu } from 'react-icons/cg';
-import { VscChevronDown } from 'react-icons/vsc';
-import { MdHeadsetMic } from 'react-icons/md';
-import { AiOutlineLeft,AiOutlineRight,AiOutlineTablet ,AiOutlineCamera} from 'react-icons/ai';
-import { RiComputerLine } from 'react-icons/ri';
-import { GiSmartphone } from 'react-icons/gi';
-import { GoWatch } from 'react-icons/go';
-import { BsLaptop,BsTools,BsKeyboard ,BsCameraVideo} from 'react-icons/bs';
+import { AiOutlineLeft,AiOutlineRight } from 'react-icons/ai';
 
 import sliderbg from '../../assets/imgs/slider-bg.jpg'
 import sliderimg1 from '../../assets/imgs/slider1.png'
@@ -51,8 +44,6 @@ function Hero() {
             <span className="visually-hidden">Next</span>
           </button>
         </div>
-
-
     </div>
   )
 }

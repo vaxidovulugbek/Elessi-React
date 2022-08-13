@@ -25,7 +25,6 @@ function Cart() {
                   <div className='wishlist__cart-info df'>
                     <h4 className='wishlist__cart-title '>{el.name}</h4>
                     <span className='wishlist__cart-price'>${el.price}</span>
-                    {/* <button className='wishlist__cart-add'>ADD TO CART</button> */}
                   </div>
                 </div>
                 <button className='wishlist__cart-close' onClick={()=> mycart.removeSaveCart(el.id)}>x</button>

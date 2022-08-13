@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { FiHeart ,FiEye} from 'react-icons/fi';
-import { FaHeart} from 'react-icons/fa';
 import { appContext } from '../../App';
 import Object from '../Objects/Headphones'
 
@@ -30,7 +29,6 @@ function Featured() {
                 <p className='product__offer-sold'>avialable:<span className='product__offer-avialable'>{item.avialable}</span></p>
               </div>
             </div>
-                // <NewArrival item={item} i={i}/>
             })
           }
       </div>

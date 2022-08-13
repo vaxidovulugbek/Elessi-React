@@ -1,6 +1,5 @@
 import React, { useContext } from 'react'
 import { FiHeart ,FiEye} from 'react-icons/fi';
-import { FaHeart} from 'react-icons/fa';
 import { appContext } from '../../App';
 import Object from '../Objects/Headphones'
 import { NavLink } from 'react-router-dom';
@@ -34,7 +33,6 @@ function SpeakerFeatured() {
             })
           }
       </div>
-
   )
 }
 

@@ -4,12 +4,9 @@ import { BsArrowsFullscreen ,BsPiggyBank} from 'react-icons/bs';
 import { AiOutlineCar ,AiOutlineCreditCard} from 'react-icons/ai';
 import { FiPhoneCall } from 'react-icons/fi';
 import { GiReturnArrow } from 'react-icons/gi';
-// import { BsArrowsFullscreen } from 'react-icons/bs';
-// import { BsArrowsFullscreen } from 'react-icons/bs';
 import Object from '../Objects/Headphones'
-
 import './Arrivals.css'
-import { NavLink } from 'react-router-dom';
+
 function Arrivals() {
   let mycart = useContext(appContext)
   let result = Object.filter(element => element.type === "arrivals");
@@ -25,22 +22,6 @@ function Arrivals() {
       <ul className='arrivals__list'>
         {
           result.map((item,index) => {
-            // return <NavLink className="arrivals__link" key={index} to={`/wiev/${item.id}`}>
-            // <li className='arrivals__item df' onClick={() => mycart.setWievMore(!mycart.WievMore)}>
-            //   <div className='arrivals-show-el'>
-            //     <img className='arrivals__list-img' src={item.imgone} alt="" />
-            //     <div className='arrivals__list-cntn'><BsArrowsFullscreen className='arrivals-show-icon'/></div>
-            //     <div className='arrivals__show-bg'></div>
-            //   </div>
-            //   <div className='arrivals__info'>
-            //     <h3 className='arrivals__list-title'>{item.name}</h3>
-            //     <div className='arrivals__list-prices'>
-            //       <span className='arrivals__list-discount'>${item.discountprice}</span>
-            //       <span className='arrivals__list-price'>${item.price}</span>
-            //     </div>
-            //   </div>
-            // </li>
-            // </NavLink>
             return <li className='arrivals__link df' onClick={() => wievHendler(item)} key={index}>
               <div className='arrivals-show-el'>
                 <img className='arrivals__list-img' src={item.imgone} alt="" />

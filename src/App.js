@@ -14,11 +14,8 @@ function App() {
   let [WievMore,setWievMore] = useState(false)
   let [searchRespon,setSearchRespon] = useState(false)
   let [WievElement,setWievElement] = useState([])
-  let [showLegth,setShowLegth] = useState(true)
   let [menuRespond,setMenuRespond] = useState(false)
   let [cartTotal,setCartTotal] = useState(0)
-
-  let [length,setlength] = useState(false)
 
   let [saveArr, setSaveArr] = useState([])
   let [cardArr, setCardArr] = useState([])
@@ -42,15 +39,6 @@ let removeSaveCart = (e) => {
     return item.id !== e
   }))
 }
-
-if (cardArr.length === 0) {
-  console.log(cardArr.length);
-  // setlength(true)
-  // setShowLegth(!showLegth)
-}
-// else if (cardArr.length > 0) {
-//   setShowLegth(true)
-// }
 
   return (
     <div className="App">

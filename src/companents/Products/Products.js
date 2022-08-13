@@ -12,7 +12,6 @@ function Products() {
   let mycart = useContext(appContext)
   const [open, setOpen] = useState(false);
   const [heart, setHeart] = useState(true);
-
   const onmuseHendler = (e) => {
     setOpen(true)
   }
@@ -28,10 +27,6 @@ function Products() {
             Object.map((item,i) => {
               return <NavLink className='product__offer-itemm' key={i} to={`/card/${item.id}`}>
                 <div >
-              {/* <img className='product__offer-img' src={item.imgone} alt="" /> */}
-              {/* <div onMouseOver={() => setOpen(true)} onMouseOut={() => setOpen(false)}>
-                <img className='product__offer-img'  src={open ? item.imgtwo  : item.imgone }/>
-              </div> */}
                <img className='product__offer-img' onMouseEnter={onmuseHendler}  src={item.imgone}/>
               <div className='product__offer-categor df ai'>
                 <button className='product__offer-button' onClick={() => mycart.saveCart(item)}>+</button>

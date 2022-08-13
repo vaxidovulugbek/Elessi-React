@@ -3,8 +3,7 @@ import logo from '../../assets/imgs/logo.png'
 import { BsTwitter ,BsInstagram} from 'react-icons/bs';
 import { FaFacebookF,FaRegEnvelope } from 'react-icons/fa';
 import companies from '../../assets/imgs/companies.png'
-// import { BsTwitter } from 'react-icons/bs';
-// import { BsTwitter } from 'react-icons/bs';
+
 import './Footer.css'
 function Footer() {
   return (
