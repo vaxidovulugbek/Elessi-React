@@ -26,7 +26,7 @@ function Products() {
           {
             Object.map((item,i) => {
               return <NavLink className='product__offer-itemm' key={i} to={`/card/${item.id}`}>
-                <div >
+                <div>
                <img className='product__offer-img' onMouseEnter={onmuseHendler}  src={item.imgone}/>
               <div className='product__offer-categor df ai'>
                 <button className='product__offer-button' onClick={() => mycart.saveCart(item)}>+</button>

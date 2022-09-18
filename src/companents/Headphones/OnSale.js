@@ -10,7 +10,7 @@ function OnSale() {
   return (
     <div className='container'>
           <div className='headphones-content df ai between'>
-          {
+          {/* {
             result.map((item,i) => {
               return <div className='product__offer-item' key={i}>
               <img className='product__offer-img' src={item.imgone}/>
@@ -30,7 +30,7 @@ function OnSale() {
               </div>
             </div>
             })
-          }
+          } */}
       </div>
     </div>
 

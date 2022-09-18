@@ -38,8 +38,6 @@ function Cart() {
               <span className='cart__total-price'>${mycart.cartTotal}</span>
             </div>
           </div>
-
-     
     </div>
   )
 }
